@@ -13,11 +13,11 @@ def emotion_detector(text_to_analyze):
     emotions = formatted_resp["emotionPredictions"][0]["emotion"]
 
     emotion_scores = {
-        "anger_score": emotions["anger"],
-        "disgust_score": emotions["disgust"],
-        "fear_score": emotions["fear"],
-        "joy_score": emotions["joy"],
-        "sadness_score": emotions["sadness"]
+        "anger": emotions["anger"],
+        "disgust": emotions["disgust"],
+        "fear": emotions["fear"],
+        "joy": emotions["joy"],
+        "sadness": emotions["sadness"]
     }
 
     dominant_emotion = None
