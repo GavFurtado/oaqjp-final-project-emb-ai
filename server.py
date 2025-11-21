@@ -12,6 +12,9 @@ def emotion_detector_route():
 
     result = emotion_detector(text)
 
+    if result["dominant_emotion"] == None:
+        return "Invalid text! Please try again!"
+
     anger = result["anger"]
     disgust = result["disgust"]
     fear = result["fear"]
