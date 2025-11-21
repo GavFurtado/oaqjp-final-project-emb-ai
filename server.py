@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from EmotionDetection.emotion_detection import emotion_detector
 
 app = Flask(__name__)
@@ -28,6 +28,10 @@ def emotion_detector_route():
     )
 
     return response_str
+
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(host="localhost", port=5000)

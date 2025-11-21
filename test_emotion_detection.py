@@ -28,5 +28,4 @@ class TestSentimentAnalyzer(unittest.TestCase):
             'fear'
         )
 
-
 unittest.main()
